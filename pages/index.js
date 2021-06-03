@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import SearchMovies from './components/SearchMovies';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -13,13 +14,21 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to Movie Search!
         </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <p className={styles.description}>
+          Use this web app to search for movies to watch based on user ratings
+        </p>
+
+        <div>
+          <SearchMovies/>
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
