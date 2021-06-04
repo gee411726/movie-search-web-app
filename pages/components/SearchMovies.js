@@ -4,7 +4,7 @@ import movieStyles from '../movies.module.css';
 import { TextField, InputAdornment } from '@material-ui/core/';
 import TheatersIcon from '@material-ui/icons/Theaters';
 import MovieCardsDisplay from './MovieCardsDisplay';
-import { apiKey, configProps } from '../config';
+import { apiKey, configProps } from '../../config';
 
 
 export default function SearchMovies() {

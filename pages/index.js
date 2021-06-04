@@ -10,14 +10,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Movie Search!
         </h1>
-
+        <br />
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <p className={styles.description}>
-          Use this web app to search for movies to watch based on user ratings
+          Use this web app to search for movies to watch
         </p>
 
         <div>

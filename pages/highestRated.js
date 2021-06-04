@@ -3,7 +3,7 @@ import { useCallback, useRef, useState, useEffect } from 'react';
 import MovieCardsDisplay from './components/MovieCardsDisplay';
 import YearDropdown from './components/YearDropdown';
 import 'react-dropdown/style.css';
-import { configProps, apiKey } from './config';
+import { configProps, apiKey } from '../config';
 
 
 export default function HighestRated() {

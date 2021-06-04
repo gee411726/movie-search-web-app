@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import MovieCardsDisplay from './components/MovieCardsDisplay';
 import GenreDropdown from './components/GenreDropdown';
 import 'react-dropdown/style.css';
-import { configProps, apiKey } from './config';
+import { configProps, apiKey } from '../config';
 
 
 export default function HighestRated() {

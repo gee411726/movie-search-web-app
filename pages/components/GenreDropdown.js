@@ -1,6 +1,6 @@
 import styles from '../../styles/Home.module.css';
 import Dropdown from 'react-dropdown';
-import { apiKey } from '../config';
+import { apiKey } from '../../config';
 import { useCallback, useState } from 'react';
 
 
