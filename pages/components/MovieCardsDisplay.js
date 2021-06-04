@@ -1,6 +1,6 @@
 import MovieCard from './MovieCard';
 import { Container, Row, Col } from 'react-bootstrap';
-import styles from './search-movies.module.css';
+import movieStyles from '../movies.module.css';
 
 
 export default function MovieCardsDisplay(props) {
@@ -12,15 +12,27 @@ export default function MovieCardsDisplay(props) {
     return cache
   }
   
-  const moviesArr = Object.keys(props).map(function(key) {
-    return props[key]
-  });  
+  const moviesArr = Object.keys(props).reduce(function(movies, key) {
+    if ("vote_count" in props[key]) {
+      movies.push(props[key]);
+    }
+    return movies
+  }, [])
+
+  moviesArr.sort(function(a, b) {
+    if (a.vote_average < b.vote_average) {
+      return 1
+    } else {
+      return -1
+    };
+  })
+
 
   const moviesChunks = chunk(moviesArr, 4)
   const rows = moviesChunks.map((movieChunk, index) => {
     const moviesCols = movieChunk.map((movie, index) => {
       return (
-        <Col xs="6" md="3" key={movie.id}>
+        <Col xs="6" s="4" md="3" lg="3" key={movie.id}>
             <MovieCard {...{...movie, ...props.images }} key={movie.id}/>
         </Col>
       )
@@ -29,7 +41,7 @@ export default function MovieCardsDisplay(props) {
   });
 
   return (
-    <div styles={{height: '300px'}}>
+    <div className={movieStyles.display}>
       <Container>
         {rows}
       </Container>

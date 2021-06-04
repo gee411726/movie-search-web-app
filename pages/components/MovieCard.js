@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)',
   },
   multiLineEllipsis: {
-    overflow: "hidden",
+    overflow: "scroll",
     textOverflow: "ellipsis",
     display: "-webkit-box",
-    "-webkit-line-clamp": 4,
+    "-webkit-line-clamp": 5,
     "-webkit-box-orient": "vertical"
   }
 }));
@@ -59,7 +59,7 @@ export default function MovieCard(props) {
           </IconButton>
         }
         title={props.title}
-        subheader={props.release_date}
+        subheader={`Average Rating: ${props.vote_average}`}
       />
       <CardMedia
         square
@@ -97,9 +97,8 @@ export default function MovieCard(props) {
           <Typography paragraph>
             Release Date: {props.release_date} <br />
             Original Language: {props.original_language} <br />
-            Popularity: {props.popularity} <br />
+            Popularity: {Math.floor(props.popularity/10) } <br />
             # Ratings: {props.vote_count} <br />
-            Average Rating: {props.vote_average}
           </Typography>
         </CardContent>
       </Collapse>

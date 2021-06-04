@@ -9,7 +9,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -118,4 +118,16 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.backgroundImg {
+  background-image: url('/public/stock1.jpeg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dropdown {
+  width: 100px;
 }
