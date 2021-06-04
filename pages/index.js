@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Movie Search!
+          Welcome to Brian's Movie Search!
         </h1>
         <br />
         <p className={styles.description}>
@@ -38,12 +38,12 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://www.themoviedb.org/"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
+            <h2>The Movie Database &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Link to Data Source Website
             </p>
           </a>
         </div>
